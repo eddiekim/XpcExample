@@ -8,19 +8,19 @@
 
 import Foundation
 
-//class MyXpcObject: NSObject, MyXpcInterface {
-//    func toUpper(s: String, callback: (String) -> Void) {
-//        print("Got toUpper message")
-//        callback(s.uppercased())
-//    }
-//}
-//
-//class MyXpcListenerDelegate: NSObject, NSXPCListenerDelegate {
-//
-//    func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
-//        newConnection.exportedObject = MyXpcObject()
-//        newConnection.exportedInterface = NSXPCInterface(with: MyXpcInterface.self)
-//        newConnection.resume()
-//        return true
-//    }
-//}
+class MyXpcObject: NSObject, MyXpcInterface {
+    func toUpper(s: String, callback: (String) -> Void) {
+        print("Got toUpper message")
+        callback(s.uppercased())
+    }
+}
+
+class MyXpcListenerDelegate: NSObject, NSXPCListenerDelegate {
+
+    func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
+        newConnection.exportedObject = MyXpcObject()
+        newConnection.exportedInterface = NSXPCInterface(with: MyXpcInterface.self)
+        newConnection.resume()
+        return true
+    }
+}

@@ -10,7 +10,7 @@ import Foundation
 
 // Create the XPC listener
 let listenerDelegate = MyXpcListenerDelegate()
-let listener = NSXPCListener(machServiceName: "com.example.eddie")
+let listener = NSXPCListener(machServiceName: MyXpcConfig.serviceName)
 listener.delegate = listenerDelegate
 listener.resume()
 print("XPC is listening")

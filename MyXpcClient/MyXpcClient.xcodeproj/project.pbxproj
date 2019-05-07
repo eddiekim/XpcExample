@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48B33CC9228237E800E46F6B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B33CC8228237E800E46F6B /* main.swift */; };
+		48F277662282412600DD08D6 /* MyXpcInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F277642282412600DD08D6 /* MyXpcInterface.swift */; };
+		48F277672282412600DD08D6 /* MyXpcConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F277652282412600DD08D6 /* MyXpcConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		48B33CC5228237E800E46F6B /* MyXpcClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyXpcClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B33CC8228237E800E46F6B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		48F277642282412600DD08D6 /* MyXpcInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyXpcInterface.swift; path = ../../Shared/MyXpcInterface.swift; sourceTree = "<group>"; };
+		48F277652282412600DD08D6 /* MyXpcConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyXpcConfig.swift; path = ../../Shared/MyXpcConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				48B33CC7228237E800E46F6B /* MyXpcClient */,
+				48F277632282411400DD08D6 /* Shared */,
 				48B33CC6228237E800E46F6B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +65,15 @@
 				48B33CC8228237E800E46F6B /* main.swift */,
 			);
 			path = MyXpcClient;
+			sourceTree = "<group>";
+		};
+		48F277632282411400DD08D6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				48F277652282412600DD08D6 /* MyXpcConfig.swift */,
+				48F277642282412600DD08D6 /* MyXpcInterface.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				48B33CC9228237E800E46F6B /* main.swift in Sources */,
+				48F277672282412600DD08D6 /* MyXpcConfig.swift in Sources */,
+				48F277662282412600DD08D6 /* MyXpcInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

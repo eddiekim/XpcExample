@@ -8,5 +8,5 @@
 import Foundation
 
 @objc protocol MyXpcInterface {
-    func toUpper(s: String, callback: (_ upper: String) -> Void)
+    func toUpper(s: String, callback: @escaping (_ upper: String) -> Void)
 }

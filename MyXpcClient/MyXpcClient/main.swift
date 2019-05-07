@@ -8,5 +8,16 @@
 
 import Foundation
 
-print("Hello, World!")
+// Setup the connection
+let connection = NSXPCConnection(machServiceName: MyXpcConfig.serviceName)
+connection.remoteObjectInterface = NSXPCInterface(with: MyXpcInterface.self)
+connection.resume()
 
+// Send a message
+print("Send Message")
+let remote = connection.remoteObjectProxy as! MyXpcInterface
+remote.toUpper(s: "hello") { (s) in
+    print(s)
+}
+
+RunLoop.current.run()

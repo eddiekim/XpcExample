@@ -9,7 +9,7 @@
 import Foundation
 
 // Setup the connection
-let connection = NSXPCConnection(machServiceName: MyXpcConfig.serviceName)
+let connection = NSXPCConnection(machServiceName: MyXpcConfig.serviceName, options: .privileged) // Set if launch daemon. Not required for launch agents
 connection.remoteObjectInterface = NSXPCInterface(with: MyXpcInterface.self)
 connection.resume()
 

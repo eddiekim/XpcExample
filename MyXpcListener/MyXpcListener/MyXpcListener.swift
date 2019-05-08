@@ -10,7 +10,7 @@ import Foundation
 
 class MyXpcObject: NSObject, MyXpcInterface {
     func toUpper(s: String, callback: (String) -> Void) {
-        print("Got toUpper message")
+        Logger.log("Handle toUpper message")
         callback(s.uppercased())
     }
 }
@@ -21,6 +21,8 @@ class MyXpcListenerDelegate: NSObject, NSXPCListenerDelegate {
         newConnection.exportedObject = MyXpcObject()
         newConnection.exportedInterface = NSXPCInterface(with: MyXpcInterface.self)
         newConnection.resume()
+
+        Logger.log("Accept new connection")
         return true
     }
 }
